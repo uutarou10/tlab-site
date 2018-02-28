@@ -16,11 +16,28 @@
 
 $highlight: #4b9ad8;
 
+/* ---------- Global ---------- */
+
 * {
   color: #4a4a4a;
   font-family: "Mplus 1p", -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "ヒラギノ角ゴ ProN W3", Meiryo, sans-serif;
 }
 
+.container {
+  margin: 0 auto;
+  width: 90vw;
+}
+
+h2 {
+  border-bottom: 1px solid $highlight;
+  color: $highlight;
+  display: block;
+  font-size: 20px;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+/* ---------- Header ---------- */
 header {
   align-items: flex-end;
   border-bottom: 2px solid $highlight;
@@ -58,3 +75,4 @@ header {
     }
   }
 }
+
