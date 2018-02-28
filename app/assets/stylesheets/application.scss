@@ -14,13 +14,16 @@
  *= require_self
  */
 
+$highlight: #4b9ad8;
+
 * {
+  color: #4a4a4a;
   font-family: "Mplus 1p", -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "ヒラギノ角ゴ ProN W3", Meiryo, sans-serif;
 }
 
 header {
   align-items: flex-end;
-  border-bottom: 2px solid #4b9ad8;
+  border-bottom: 2px solid $highlight;
   display: flex;
   flex-direction: row;
   padding: 0 32px;
@@ -31,6 +34,10 @@ header {
     flex-direction: column;
     font-size: 24px;
     margin: 8px 16px 8px 0;
+
+    span {
+      color: $highlight;
+    }
 
     span:first-child {
       font-size: 14px;
