@@ -28,6 +28,25 @@ $highlight: #4b9ad8;
   width: 90vw;
 }
 
+.button {
+  color: $highlight;
+  display: block;
+  width: 320px;
+  height: 56px;
+  border: 1px solid $highlight;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 18px;
+  line-height: 56px;
+  margin: 0 auto;
+  transition: all 1s ease 5ms;
+}
+
+.button:hover {
+  background-color: $highlight;
+  color: white;
+}
+
 h2 {
   border-bottom: 1px solid $highlight;
   color: $highlight;
