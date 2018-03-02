@@ -95,3 +95,25 @@ header {
   }
 }
 
+/* ---------- Footer ---------- */
+footer {
+  background-color: $highlight;
+  text-align: center;
+  padding: 24px 0;
+
+  small, a {
+    color: white;
+  }
+
+  nav {
+    a {
+      display: inline-block;
+      padding-right: 8px;
+      transition: all 1s ease 50ms;
+    }
+
+    a:hover {
+      color: #ccc;
+    }
+  }
+}
