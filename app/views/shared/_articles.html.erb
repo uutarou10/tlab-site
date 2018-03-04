@@ -1,0 +1,5 @@
+<ul class="article-list">
+  <% articles.each do |article| %>
+    <%= render partial: 'shared/article', locals: {article: article} %>
+  <% end %>
+</ul>

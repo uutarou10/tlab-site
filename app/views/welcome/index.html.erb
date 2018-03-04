@@ -7,3 +7,8 @@
   </div>
   <%= link_to '研究室概要', '/about', class: 'button' %>
 </section>
+<section>
+  <h2>お知らせ・最新情報</h2>
+  <%= render partial: 'shared/articles', locals: {articles: @articles} %>
+  <%= link_to 'お知らせ・最新情報一覧へ', '/about', class: 'button' %>
+</section>
