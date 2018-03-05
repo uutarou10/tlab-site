@@ -4,8 +4,13 @@
 
 $highlight: #4b9ad8;
 
-ul {
+.project-list {
+  margin: 16px 0;
+  background-color: rgba($color: gray, $alpha: 0.1);
+  padding: 8px;
+}
 
+ul {
   li {
     margin-bottom: 8px;
 
@@ -22,7 +27,8 @@ ul {
 }
 
 .header-img {
-  width: 100vw;
+  margin: 0;
+  width: 100%;
   margin-bottom: 8px;
 }
 
