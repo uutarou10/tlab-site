@@ -12,7 +12,9 @@
 
   <body>
     <%= render 'layouts/header' %>
-    <%= image_tag 'header.png', class: 'header-img' %>
+    <% if controller.controller_name == 'welcome' %> 
+      <%= image_tag 'header.png', class: 'header-img' %>
+    <% end %>
     <div class="container">
       <%= yield %>
     </div>
