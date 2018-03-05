@@ -15,11 +15,12 @@
  */
 
 $highlight: #4b9ad8;
+$base: #4a4a4a;
 
 /* ---------- Global ---------- */
 
 * {
-  color: #4a4a4a;
+  color: $base;
   font-family: "Mplus 1p", -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "ヒラギノ角ゴ ProN W3", Meiryo, sans-serif;
 }
 
@@ -56,6 +57,15 @@ h2 {
   text-align: center;
 }
 
+a {
+  text-decoration: underline;
+  color: $highlight;
+}
+
+p {
+  margin-bottom: 8px;
+}
+
 /* ---------- Header ---------- */
 header {
   align-items: flex-end;
@@ -84,6 +94,8 @@ header {
     margin-bottom: 8px;
 
     a {
+      color: $base;
+      text-decoration: none;
       display: inline-block;
       padding-right: 8px;
       transition: all 1s ease 50ms;
