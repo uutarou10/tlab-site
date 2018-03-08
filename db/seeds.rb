@@ -22,3 +22,11 @@ article = Article.create(
                      user: user,
                      published_at: Time.gm(2018,2,2)
 )
+
+project = Project.create(
+                     title: 'ビジネスプロジェクト',
+                     description: 'エンジニアを対象とした、ビジネススキル習得支援法を検討し、実際に育成プログラムを提供しています。',
+                     feed_url: 'https://example.com/feed',
+                     url: 'https://example.com/',
+                     abbreviation: 'Biz'
+)
