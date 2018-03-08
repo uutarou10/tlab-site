@@ -18,10 +18,13 @@ $highlight: #4b9ad8;
 $base: #4a4a4a;
 
 /* ---------- Global ---------- */
-
 * {
   color: $base;
   font-family: "Mplus 1p", -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "ヒラギノ角ゴ ProN W3", Meiryo, sans-serif;
+}
+
+.turbolinks-progress-bar {
+  background-color: $highlight;
 }
 
 .container {
@@ -49,13 +52,24 @@ $base: #4a4a4a;
   color: white;
 }
 
+hr {
+  margin-bottom: 8px;
+}
+
 h2 {
   border-bottom: 1px solid $highlight;
   color: $highlight;
   display: block;
   font-size: 20px;
+  font-weight: bold;
   margin-bottom: 8px;
   text-align: center;
+}
+
+h3 {
+  margin-bottom: 8px;
+  font-weight: bold;
+  border-bottom: 1px dotted $highlight;
 }
 
 a {
