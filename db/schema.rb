@@ -37,6 +37,7 @@ ActiveRecord::Schema.define(version: 20180308052735) do
     t.string "description"
     t.string "feed_url"
     t.string "url"
+    t.string "site_title"
     t.string "abbreviation"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
