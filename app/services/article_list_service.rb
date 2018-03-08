@@ -8,16 +8,18 @@ module ArticleListService
     result = []
 
     (article_count || [articles.count, project_articles.count].max).times do
-      if (articles.nil? && project_articles.nil?)
+      if (articles.empty? && project_articles.empty?)
         break
       end
 
-      if articles.nil?
+      if articles.empty?
         result = project_articles.shift
+        next
       end
 
-      if project_articles.nil?
+      if project_articles.empty?
         result = articles.shift
+        next
       end
 
       if articles.first.published_at > project_articles.first.published_at
