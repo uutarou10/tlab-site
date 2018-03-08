@@ -1,7 +1,15 @@
 <!DOCTYPE html>
 <html lang="ja">
   <head>
-    <title>東京工科大学 田胡研究室</title>
+    <title>
+      <%=
+       unless @title.blank?
+         @title + ' | 東京工科大学 田胡研究室'
+       else
+         '東京工科大学 田胡研究室'
+       end
+      %>
+    </title>
     <%= csrf_meta_tags %>
 
     <link href="https://fonts.googleapis.com/earlyaccess/mplus1p.css" rel="stylesheet" />
