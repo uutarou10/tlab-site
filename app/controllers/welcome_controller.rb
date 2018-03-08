@@ -1,14 +1,7 @@
 class WelcomeController < ApplicationController
+  include ArticleListService
+
   def index
-    @articles = [
-        {
-            date: '2018/02/02',
-            title: 'hogefugaほげふが'
-        },
-        {
-            date: '2018/02/02',
-            title: 'hogefugaほげふが'
-        }
-    ]
+    @articles = article_list(5)
   end
 end
