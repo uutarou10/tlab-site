@@ -1,0 +1,16 @@
+<article>
+  <h1><%= @article.title %></h1>
+  <div class="article-header">
+    <p>公開日: <%= @article.published_at.to_s(:db) %></p>
+    <% unless @article.published_at == @article.updated_at %>
+      <p>更新日: <%= @article.updated_at.to_s(:db) %></p>
+    <% end %>
+  </div>
+    <div class="article-body">
+      <%= markdown(@article.body) %>
+    </div>
+    <hr>
+    <div class="article-footer">
+      <p>Author: <%= @article.user.display_name %></p>
+    </div>
+</article>
