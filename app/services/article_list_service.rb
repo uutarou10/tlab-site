@@ -13,19 +13,19 @@ module ArticleListService
       end
 
       if articles.empty?
-        result = project_articles.shift
+        result << project_articles.shift
         next
       end
 
       if project_articles.empty?
-        result = articles.shift
+        result << articles.shift
         next
       end
 
       if articles.first.published_at > project_articles.first.published_at
-        result = articles.shift
+        result << articles.shift
       else
-        result = project_articles.shift
+        result << project_articles.shift
       end
     end
 
