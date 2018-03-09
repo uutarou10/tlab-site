@@ -41,3 +41,10 @@ project = Project.create(
     site_title: 'ビジネスプロジェクトブログ',
     abbreviation: 'Biz'
 )
+
+ProjectArticle.create(
+    title: 'プロジェクト記事のテスト',
+    body: 'テスト本文テスト本文テスト本文テスト本文',
+    published_at: Time.gm(2018,2,3),
+    project: project
+)
