@@ -7,7 +7,7 @@ module ArticleListService
     # articleとproject_articleをマージソートして配列に入れる(最大article_count件)
     result = []
 
-    (article_count || [articles.count, project_articles.count].max).times do
+    (article_count || articles.count + project_articles.count).times do
       if (articles.empty? && project_articles.empty?)
         break
       end
