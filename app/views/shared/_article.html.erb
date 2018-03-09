@@ -1,3 +1,5 @@
 <li>
-  <p><%= article.title %></p>
+  <div class="date"><%= article.published_at %></div>
+  <div class="category"><%= article.respond_to?(:abbreviation) ? article.abbreviation : 'お知らせ' %></div>
+  <div class="title"><%= link_to article.title %></div>
 </li>

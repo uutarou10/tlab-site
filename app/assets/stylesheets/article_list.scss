@@ -1,0 +1,32 @@
+$highlight: #4b9ad8;
+
+.article-list {
+  li {
+    display: flex;
+    margin-bottom: 8px;
+
+    .date {
+      width: 128px;
+      text-align: center;
+      margin-right: 8px;
+    }
+
+    .category {
+      width: 80px;
+      text-align: center;
+      border: 1px solid $highlight;
+      margin-right: 8px;
+    }
+
+    .title {
+      width: calc(100% - 128px - 80px);
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+  }
+
+  li > * {
+    padding: 4px 0;
+  }
+}
