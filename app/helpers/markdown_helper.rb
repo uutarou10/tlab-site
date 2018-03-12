@@ -1,9 +1,10 @@
 module MarkdownHelper
   def markdown(text)
-    unless @processor
-      @processor = Qiita::Markdown::Processor.new(hostname: 'localhost')
+    unless @markdown
+      renderer = Redcarpet::Render::HTML.new
+      @markdown = Redcarpet::Markdown.new(renderer)
     end
 
-    @processor.call(text)[:output].to_s.html_safe
+    @markdown.render(text).html_safe
   end
 end
