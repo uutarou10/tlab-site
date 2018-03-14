@@ -1,5 +1,9 @@
 <li>
   <div class="date"><%= article.published_at %></div>
   <div class="category"><%= article.instance_of?(ProjectArticle) ? article.project.abbreviation : 'お知らせ' %></div>
-  <div class="title"><%= link_to article.title %></div>
+  <% if article.instance_of?(ProjectArticle) %>
+    <div class="title"><%= link_to article.title %></div>
+  <% else %>
+    <div class="title"><%= link_to article.title, 'articles/' + article.id.to_s %></div>
+ <% end %>
 </li>
