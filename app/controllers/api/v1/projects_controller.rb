@@ -1,5 +1,6 @@
 class Api::V1::ProjectsController < ApplicationController
   protect_from_forgery
+  before_action :authenticate_user
   def index
     render json: Project.all.select_attr
   end

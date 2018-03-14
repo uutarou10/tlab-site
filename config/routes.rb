@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   resources :contact, only: [:index]
   resources :articles, only: [:index, :show]
 
+  post 'api/v1/login' => 'user_token#create'
   namespace :api do
     namespace :v1 do
       resources :articles, only: [:index, :create, :show, :update, :destroy]
