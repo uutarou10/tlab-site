@@ -12,13 +12,19 @@ class Api::V1::UsersController < ApplicationController
     render json: user # TODO: digestを返さないようにする
   end
 
+  def update
+    user = User.find(params[:id])
+    user.update_attributes!(user_params)
+    render json: user
+  end
+
   def show
     render json: User.find(params[:id])
   end
 
   def destroy
-    # User.
-    # TODO: Userに紐づく記事がある時にどうするか考えてから実装する
+    User.find(params[:id]).destroy!
+    head 204
   end
 
   private
