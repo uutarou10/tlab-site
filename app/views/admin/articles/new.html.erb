@@ -1,2 +1,15 @@
-<h1>Admin::Articles#new</h1>
-<p>Find me in app/views/admin/articles/new.html.erb</p>
+<h2>記事作成</h2>
+<p>本当はエディターとか作りたかった。</p>
+<p>とりあえずMarkdownをアップロードすると公開されるよ</p>
+<hr>
+<%= form_tag('/admin/articles', method: 'post', multipart: true) do %>
+  <div class="form-group">
+    <label for="">タイトル</label>
+    <%= text_field :article, :title, class: 'form-control', placeholder: 'Input article title here', required: true %>
+  </div>
+  <div class="form-group">
+    <label>記事本文</label>
+    <%= file_field :article, :body, class: 'form-control', accept: 'text/markdown', required: true %>
+  </div>
+  <button type="submit" class="btn btn-primary">公開</button>
+<% end %>
