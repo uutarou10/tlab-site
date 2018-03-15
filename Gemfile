@@ -32,6 +32,9 @@ gem 'bcrypt', '~> 3.1.7'
 # Markdown parser
 gem 'redcarpet'
 
+# Bootstrap
+gem 'bootstrap', '~> 4.0.0'
+
 # JWT lib
 gem 'knock'
 
