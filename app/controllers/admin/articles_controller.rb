@@ -2,6 +2,7 @@ class Admin::ArticlesController < ApplicationController
   layout 'admin/layouts/application'
 
   def index
+    @articles = Article.all
   end
 
   def new
