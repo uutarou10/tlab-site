@@ -20,6 +20,7 @@ class Admin::ProjectsController < ApplicationController
   end
 
   def new
+    @project = Project.new
   end
 
   private

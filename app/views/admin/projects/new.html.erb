@@ -1,2 +1,28 @@
-<h1>Admin::Projects#new</h1>
-<p>Find me in app/views/admin/projects/new.html.erb</p>
+<h2>プロジェクト作成</h2>
+<%= form_for @project, url: {action: :create} do |f| %>
+  <div class="form-group">
+    <%= f.label :title, 'タイトル' %>
+    <%= f.text_field :title, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :description, '説明' %>
+    <%= f.text_field :description, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :url, 'プロジェクトサイトのURL' %>
+    <%= f.url_field :url, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :site_title, 'プロジェクトサイトのタイトル' %>
+    <%= f.text_field :site_title, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :feed_url, 'フィードURL' %>
+    <%= f.url_field :feed_url, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :abbreviation, '略称' %>
+    <%= f.text_field :abbreviation, class: 'form-control' %>
+  </div>
+  <%= f.submit '作成', class: 'btn btn-primary' %>
+<% end %>
