@@ -15,7 +15,7 @@ class Admin::ArticlesController < ApplicationController
     @article.body  = params[:article][:body].read.force_encoding('utf-8')
     @article.published_at = Time.current
     @article.save!
-    redirect_to 'index'
+    redirect_to '/admin/articles'
   end
 
   def edit
@@ -25,5 +25,7 @@ class Admin::ArticlesController < ApplicationController
   end
 
   def destroy
+    Article.destroy(params[:id])
+    redirect_to '/admin/articles'
   end
 end
