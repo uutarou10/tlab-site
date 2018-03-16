@@ -1,0 +1,9 @@
+<tr>
+  <td scope="col"><%= user.name %></td>
+  <td scope="col"><%= user.email %></td>
+  <td scope="col"><%= user.display_name %></td>
+  <td scope="col">
+    <%= link_to '編集', '/admin/users/' + user.id.to_s + '/edit'%>
+    <%= link_to '削除', '/admin/users/' + user.id.to_s, method: :delete %>
+  </td>
+</tr>

@@ -1,2 +1,16 @@
-<h1>Admin::Users#index</h1>
-<p>Find me in app/views/admin/users/index.html.erb</p>
+<h2>ユーザー一覧</h2>
+<%= link_to '作成', '/admin/users/new', class: 'btn btn-primary'%>
+<hr>
+<table class="table">
+  <thead>
+  <tr>
+    <th scope="col">名前</th>
+    <th scope="col">Email</th>
+    <th scope="col">表示名</th>
+    <th scope="col"></th>
+  </tr>
+  </thead>
+  <tbody>
+  <%= render partial: 'admin/users/user_row', collection: @users, as: 'user' %>
+  </tbody>
+</table>
