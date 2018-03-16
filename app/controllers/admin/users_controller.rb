@@ -7,6 +7,7 @@ class Admin::UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     @user.save!
+    redirect_to '/admin/users'
   end
 
   def new
@@ -26,6 +27,7 @@ class Admin::UsersController < ApplicationController
     @user = User.find(params[:id])
     @user.update_attributes(user_params)
     @user.save!
+    redirect_to '/admin/users'
   end
 
   private
