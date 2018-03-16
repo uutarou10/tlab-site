@@ -1,0 +1,9 @@
+<tr>
+  <td><%= project.title %></td>
+  <td><%= project.description %></td>
+  <td><%= link_to project.url, project.url %></td>
+  <td><%= project.site_title %></td>
+  <td><%= link_to project.feed_url, project.feed_url %></td>
+  <td><%= project.abbreviation %></td>
+  <td><%= link_to '削除', '/admin/projects/' + project.id.to_s, method: :delete %></td>
+</tr>

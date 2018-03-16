@@ -1,2 +1,20 @@
-<h1>Admin::Projects#index</h1>
-<p>Find me in app/views/admin/projects/index.html.erb</p>
+<h2>プロジェクト管理</h2>
+<p>プロジェクト一覧に表示されます。</p>
+<%= link_to '作成', '/admin/projects/new', class: 'btn btn-primary' %>
+<hr>
+<table class="table">
+  <thead>
+  <tr>
+    <th scope="col">タイトル</th>
+    <th scope="col">説明</th>
+    <th scope="col">URL</th>
+    <th scope="col">サイトタイトル</th>
+    <th scope="col">フィードURL</th>
+    <th scope="col">略称</th>
+    <th scope="col"></th>
+  </tr>
+  </thead>
+  <tbody>
+  <%= render partial: 'admin/projects/project_row', collection: @projects, as: 'project' %>
+  </tbody>
+</table>
