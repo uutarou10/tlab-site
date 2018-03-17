@@ -18,6 +18,10 @@ Rails.application.routes.draw do
     resources :articles, only: [:create, :destroy, :edit, :index, :new, :update]
     resources :projects, only: [:create, :destroy, :index, :new]
     resources :users, only: [:create, :new, :index, :destroy, :edit, :update]
+
+    get 'login', to: 'sessions#new'
+    post 'login', to: 'sessions#create'
+    delete 'logout', to: 'sessions#destroy'
   end
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

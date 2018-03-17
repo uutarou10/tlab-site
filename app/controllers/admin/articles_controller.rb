@@ -1,5 +1,6 @@
 class Admin::ArticlesController < ApplicationController
   layout 'admin/layouts/application'
+  before_action :require_sign_in!
 
   def index
     @articles = Article.all
@@ -10,7 +11,7 @@ class Admin::ArticlesController < ApplicationController
 
   def create
     @article = Article.new
-    @article.user = User.first # TODO: ログイン中のユーザー
+    @article.user = @current_user # TODO: ログイン中のユーザー
     @article.title = params[:article][:title]
     @article.body  = params[:article][:body].read.force_encoding('utf-8')
     @article.published_at = Time.current

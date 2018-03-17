@@ -7,16 +7,21 @@
     <span class="navbar-toggler-icon"></span>
   </button>
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item">
-        <%= link_to '記事', '/admin/articles', class: 'nav-link' %>
-      </li>
-      <li class="nav-item">
-        <%= link_to 'プロジェクト', '/admin/projects', class: 'nav-link' %>
-      </li>
-      <li class="nav-item">
-        <%= link_to 'ユーザー', '/admin/users', class: 'nav-link' %>
-      </li>
-  </div>
+  <% if signed_in? %>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <%= link_to '記事', '/admin/articles', class: 'nav-link' %>
+        </li>
+        <li class="nav-item">
+          <%= link_to 'プロジェクト', '/admin/projects', class: 'nav-link' %>
+        </li>
+        <li class="nav-item">
+          <%= link_to 'ユーザー', '/admin/users', class: 'nav-link' %>
+        </li>
+        <li class="nav-item">
+          <%= link_to 'ログアウト', '/admin/logout', method: :delete, class: 'nav-link' %>
+        </li>
+    </div>
+  <% end %>
 </nav>

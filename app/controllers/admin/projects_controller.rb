@@ -1,5 +1,6 @@
 class Admin::ProjectsController < ApplicationController
   layout 'admin/layouts/application'
+  before_action :require_sign_in!
 
   def index
     @projects = Project.all

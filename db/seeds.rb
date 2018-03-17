@@ -11,7 +11,7 @@ user = User.create(
     name: 'Kentaro Tago',
     display_name: 'kentaro',
     password: 'secret',
-    password_digest: 'secret'
+    password_confirmation: 'secret'
 )
 
 article_body = <<-'EOS'.strip_heredoc
