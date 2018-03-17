@@ -27,6 +27,25 @@ ul {
   margin-bottom: 8px;
 }
 
+.video-warp {
+  overflow: hidden;
+
+  video {
+    width: 100%;
+    background-image: url("header.png");
+  }
+
+  p {
+    color: white;
+    font-size: 400%;
+    position: absolute;
+    left: 50vw;
+    top: 200px;
+    z-index: 1;
+    font-weight: bold;
+  }
+}
+
 section {
   margin-bottom: 8px;
 }
