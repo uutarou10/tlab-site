@@ -12,7 +12,6 @@
     </title>
     <%= csrf_meta_tags %>
 
-    <meta name="viewport" content="width=device-width,initial-scale=1">
     <link href="https://fonts.googleapis.com/earlyaccess/mplus1p.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/shitajicss@4.4.0/docs/css/shitaji.min.css">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -22,13 +21,7 @@
   <body>
     <%= render 'layouts/header' %>
     <% if controller.controller_name == 'welcome' %> 
-      <%# image_tag 'header.png', class: 'header-img' %>
-      <div class="video-warp">
-        <p>Make something interesting!</p>
-        <video src="<%= asset_path 'header.mp4' %>" autoplay loop>
-          <%= image_tag 'header.png', class: 'header-img' %>
-        </video>
-      </div>
+      <%= image_tag 'header.png', class: 'header-img' %>
     <% end %>
     <div class="container">
       <%= yield %>
