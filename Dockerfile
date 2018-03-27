@@ -10,6 +10,8 @@ COPY Gemfile.lock $APP_ROOT
 RUN cd $APP_ROOT && bundle install
 COPY . $APP_ROOT
 
+RUN bundle exec rails assets:precompile
+
 EXPOSE 3000
 VOLUME $APP_ROOT/db
 
