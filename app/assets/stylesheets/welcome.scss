@@ -30,3 +30,27 @@ ul {
 section {
   margin-bottom: 8px;
 }
+
+.triangle {
+  width: 100%;
+  margin: 16px 0;
+  text-align: center;
+}
+
+.triangle > img {
+  display: inline-block;
+  width: 362.5px;
+  height: 315.5px;
+  margin: 0 auto;
+}
+
+.headline {
+  border: none;
+  text-align: center;
+  font-size: 150%;
+  font-weight: normal;
+}
+
+.text-center {
+  text-align: center;
+}
